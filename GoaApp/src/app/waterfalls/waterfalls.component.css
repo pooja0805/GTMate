@@ -1,0 +1,41 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    display: table;
+    font-family: arial;
+    display: flex;
+    float: left;
+    
+    margin: auto;
+}
+
+  .row {
+    content: "";
+    clear: both;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+
+  }
+  
+  img{
+    max-width: 290px;
+    max-height: 300px;
+  }
+  
+  .button {
+    border: none;
+    outline: 0;
+    color: white;
+    background-color:lightseagreen;
+    cursor: pointer;
+    display: flexbox;
+    width: 290px;
+    height: 70px;
+    font-size: 18px;
+  }
+   
+
+  .button:hover {
+    opacity: 0.7;
+  }

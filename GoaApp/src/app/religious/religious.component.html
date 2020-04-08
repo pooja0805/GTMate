@@ -1,0 +1,6 @@
+<div class="row">
+    <span class="card" *ngFor="let relig of religiousService.religiouss">
+        <img src="{{relig.pictures}}" style="width:100%">
+        <a routerLink="/e-info/{{relig['_id']}}"><button class="button">{{relig.name}}</button></a>
+    </span>
+</div>

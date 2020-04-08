@@ -1,0 +1,6 @@
+<div class="row">
+    <span class="card" *ngFor="let waterfall of waterfallService.waterfalls">
+        <img src="{{waterfall.pictures}}" style="width:100%">
+        <a routerLink="/e-info/{{waterfall['_id']}}"><button class="button">{{waterfall.name}}</button></a>
+    </span>
+</div>

@@ -1,0 +1,29 @@
+<form #userForm="ngForm">
+  <h1>Sign Up</h1>
+  <hr>
+  <p>Please fill in this form to create an account.</p>
+  <h5 *ngIf="success">Your form is valid!</h5>
+  <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="userService.selectedUser._id">
+  <label>Email Id:
+    <label class="red-text">*</label>
+  </label>
+  <input type="text" name="email" #email="ngModel" [(ngModel)]="userService.selectedUser.email"
+    placeholder=" Enter Email Id" required>
+
+  <label>Password:
+    <label class="red-text">*</label>
+  </label>
+  <input type="password" name="pass" #pass="ngModel" [(ngModel)]="userService.selectedUser.pass"
+    placeholder="Enter Password">
+
+  <label>Confirm Password:
+    <label class="red-text">*</label>
+  </label>
+  <input type="password" name="cpass" #cpass="ngModel" [(ngModel)]="userService.selectedUser.cpass"
+    placeholder="Confirm Your Password">
+
+</form>
+<span><button class="reset" type="button" (click)="resetForm(userForm)">Reset</button></span>
+<span><button class="submit" type="submit" (click)="onSubmit(userForm)"
+  [disabled]="!userForm.valid">Submit</button></span>
+

@@ -1,0 +1,17 @@
+img {
+    width: 90%;
+    height: 40%;
+    padding-left: 17%;
+}
+
+div {
+    display: inline-block;
+}
+
+p {
+    text-size-adjust: 40px;
+}
+
+h1 {
+    text-align: center;
+} 

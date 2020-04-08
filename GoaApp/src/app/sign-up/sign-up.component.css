@@ -1,0 +1,53 @@
+label {
+    display: block;
+  }
+  
+  input {
+    display: block;
+    width: 50%;
+    margin-bottom: 20px;
+    padding: 1em;
+  }
+  
+  .error {
+    margin-top: -20px;
+    background: yellow;
+    padding: .5em;
+    display: inline-block;
+    font-size: .9em;
+    margin-bottom: 20px;
+  }
+  
+  .cta {
+    background: #7700FF;
+    border: none;
+    color: white;
+  
+    text-transform: uppercase;
+    border-radius: 4px;
+    padding: 1em;
+    cursor: pointer;
+    font-family: 'Montserrat';
+  }
+  
+  .results
+  {
+    margin-top: 50px;
+  }
+  
+  form{
+    padding-left: 33%;
+  }
+
+.reset{
+    padding-right: 20px;
+      margin-left: 300px;
+      background-color:#21b5b8;
+      border-radius: 10px;
+  }
+
+.submit{
+    margin-left: 300px;
+    background-color:#21b5b8;
+    border-radius: 10px;
+}

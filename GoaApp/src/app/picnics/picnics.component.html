@@ -1,0 +1,7 @@
+<div class="row">
+    <span class="card" *ngFor="let pic of picnicService.picnics">
+        <img src="{{pic.pictures}}" style="width:100%">
+        <a routerLink="/e-info/{{pic['_id']}}"><button class="button">{{pic.name}}</button></a>
+    </span>
+</div>
+

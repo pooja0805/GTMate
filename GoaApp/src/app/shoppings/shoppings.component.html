@@ -1,0 +1,6 @@
+<div class="row">
+    <span class="card" *ngFor="let shopping of shoppingService.shoppings">
+        <img src="{{shopping.pictures}}" style="width:100%">
+        <a routerLink="/e-info/{{shopping['_id']}}"><button class="button">{{shopping.name}}</button></a>
+    </span>
+</div>

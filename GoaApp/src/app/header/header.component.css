@@ -1,0 +1,109 @@
+a {
+    font-family: 'Zhi Mang Xing', cursive;
+    display: inline-block;
+    font-size: 60px;
+    height: 0px;
+    margin-left: 30%;
+    color: #4d3c82;
+
+}
+
+.headerstrap {
+    color: black;
+    width: 100%;
+    background-color: rgb(12, 199, 190);
+}
+
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.search-box{
+    position: absolute;
+    top: 6%;
+    left: 90%;
+    transform: translate(-50%,-50%);
+    background: #cbd4d4;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+.search-box:hover > .search-txt {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.search-btn {
+    color: blue;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background-color:#4d3c82;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-txt{
+        border: none;
+        background: none;
+        outline: none;
+        color: #4d3c82;
+        font-size: 16px;
+        transition: 0.4s;
+        line-height: 40px;
+        width: 65px;
+        color: b#4d3c82;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.7s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: gray;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+    margin-left: 5%;
+    display: inline-block;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 10px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}

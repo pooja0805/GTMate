@@ -1,0 +1,45 @@
+<div class="row">
+  <div class="col s12">
+    <div class="card">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <div class="row">
+            <div class="col s10">
+              <form #userForm="ngForm">
+                <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="userService.selectedUser._id">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <label>Email Id:
+                      <label class="red-text">*</label>
+                    </label>
+                    <input type="text" name="email" #email="ngModel" [(ngModel)]="userService.selectedUser.email"
+                      placeholder=" Enter Email Id" required>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <label>Password:
+                      <label class="red-text">*</label>
+                    </label>
+                    <input type="password" name="pass" #pass="ngModel" [(ngModel)]="userService.selectedUser.pass"
+                      placeholder="Enter Password">
+                    
+                  </div>
+                </div>
+              </form>
+              <div class="row">
+                <div class="input-field col s12">
+                  <button class="btn btn-custom right" type="button" (click)="resetForm(userForm)">Reset</button>
+                  <button class="btn btn-custom right" type="submit" (click)="onSubmit(userForm)" [disabled]="!userForm.valid">Submit</button>
+                </div>
+              </div>
+            </div>
+            <div class="col s7">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
