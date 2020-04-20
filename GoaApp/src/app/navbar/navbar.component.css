@@ -32,10 +32,11 @@
 }
 
 
+
 /* Style the current/active link */
 
-.navbar a.active {
-    color: tomato;
+.navbar a::selection {
+    background: tomato;
 }
 
 
