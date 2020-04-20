@@ -3,13 +3,20 @@ a {
     display: inline-block;
     font-size: 60px;
     height: 0px;
-    margin-left: 30%;
     color: white;
 
 }
 
 a span{
     color: #4d3c82;
+}
+
+img{
+    height: 50px;
+    width: 50px;
+    margin-bottom: 35px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 .headerstrap {
