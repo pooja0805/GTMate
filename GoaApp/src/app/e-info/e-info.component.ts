@@ -20,6 +20,7 @@ import { Romantic } from '../romantics/shared/romantic.model';
 
 import { ActivatedRoute } from '@angular/router';
 
+
 @Component({
   selector: 'app-e-info',
   templateUrl: './e-info.component.html',

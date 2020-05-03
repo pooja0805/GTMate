@@ -14,6 +14,14 @@
         <h4>{{current.description}}</h4>
         <br>
         <h3>Ratings: </h3>
-        <h5>{{current.rating.value}}/5</h5>
+
+        <star-rating value="{{current.rating.value}}" 
+        totalstars="5" 
+        checkedcolor="red" 
+        uncheckedcolor="black" 
+        size="24px" 
+        readonly="true" 
+        (rate)="onRate($event)"></star-rating>
+
     </div>
 </div>
