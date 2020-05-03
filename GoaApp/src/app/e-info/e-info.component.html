@@ -15,13 +15,16 @@
         <br>
         <h3>Ratings: </h3>
 
-        <star-rating value="{{current.rating.value}}" 
-        totalstars="5" 
-        checkedcolor="red" 
-        uncheckedcolor="black" 
-        size="24px" 
-        readonly="true" 
-        (rate)="onRate($event)"></star-rating>
+        <star-rating 
+            class="star"
+            value="{{current.rating.value}}" 
+            totalstars="5" 
+            checkedcolor="red" 
+            uncheckedcolor="black" 
+            size="27px" 
+            readonly="true" 
+            (rate)="onRate($event)">
+        </star-rating>
 
     </div>
 </div>
