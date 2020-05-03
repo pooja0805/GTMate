@@ -1,11 +1,22 @@
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Marmelad&display=swap" rel="stylesheet">
 </head>
 
-<div>
-    <h1 class="name">{{current.name}}</h1> <br><br>
-    <img src="{{current.pictures}}">
-    <h3>Description: </h3>
-    <h4>{{current.description}}</h4>
-    <br><br><br><br>
-</div> 
+<div class="einfo">
+    <div class="name">
+        <h1>{{current.name}}</h1>
+    </div>
+
+    <div class="image">
+        <img src="{{current.pictures}}" >
+    </div>
+
+    <div class="description">
+        <h3>Description: </h3>
+        <h4>{{current.description}}</h4>
+        <br>
+        <h3>Ratings: </h3>
+        <h5>{{current.rating.value}}/5</h5>
+    </div>
+</div>

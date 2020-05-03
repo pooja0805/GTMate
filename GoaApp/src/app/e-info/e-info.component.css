@@ -1,25 +1,59 @@
-.name{
-    margin-top: 20px;
-    text-align: center;
-    font-size: 50px;
-    font-family: 'Lobster', cursive;
-}
-
-img{
-    display: block;
-    float: left;
-    max-width: 40%;
-    max-height: 300px;
-    margin: 15px;
-}
-
-h3{
-    padding: 15px;
+.einfo{
+    display: grid;
+    grid-gap: 10px;
     margin: 10px;
-    text-decoration: underline;
+    padding: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 20% 80%;
 }
 
-h4{
-    padding: 15px;
-    margin: 10px;
+.einfo .name{
+    grid-column: 2/4;
+    font-family: 'Aclonica', sans-serif;
+}
+
+.einfo .image{
+    grid-column: 1/2;
+    grid-row: 1/-1;
+    margin: auto auto;
+}
+
+.einfo .image img {
+    height: 300px;
+    width: auto;
+}
+
+.einfo .description{
+    grid-column: 2/4;
+}
+
+.einfo .description h3{
+    font-family: 'Marmelad', sans-serif;
+    font-size: 40px;
+    font-weight: 150;
+}
+
+.einfo .description h4{
+    font-family: 'Marmelad', sans-serif;
+    
+}
+
+.einfo .description h5{
+    font-family: 'Marmelad', sans-serif;
+    
+}
+
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
 }
