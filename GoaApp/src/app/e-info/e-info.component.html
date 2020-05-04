@@ -1,7 +1,4 @@
-<head>
-    <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Marmelad&display=swap" rel="stylesheet">
-</head>
+
 
 <div class="einfo">
     <div class="name">
@@ -17,6 +14,17 @@
         <h4>{{current.description}}</h4>
         <br>
         <h3>Ratings: </h3>
-        <h5>{{current.rating.value}}/5</h5>
+
+        <star-rating 
+            class="star"
+            value="{{current.rating.value}}" 
+            totalstars="5" 
+            checkedcolor="red" 
+            uncheckedcolor="black" 
+            size="27px" 
+            readonly="true" 
+            (rate)="onRate($event)">
+        </star-rating>
+
     </div>
 </div>

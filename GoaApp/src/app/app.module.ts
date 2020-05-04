@@ -25,6 +25,8 @@ import { ShoppingsComponent } from './shoppings/shoppings.component';
 import { PicnicsComponent } from './picnics/picnics.component';
 import { RomanticsComponent } from './romantics/romantics.component';
 
+import { RatingModule } from 'ng-starrating';
+
 
 
 @NgModule({
@@ -50,6 +52,7 @@ import { RomanticsComponent } from './romantics/romantics.component';
 
   imports: [
     BrowserModule,
+    RatingModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
