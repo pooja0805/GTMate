@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,7 +13,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MainbodyComponent } from './mainbody/mainbody.component';
 import { LoginComponent } from './login/login.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { SignUpComponent } from './sign-up/sign-up.component';
+
 import{ ActivitiesComponent } from './activities/activities.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FaqComponent } from './faq/faq.component';
@@ -26,7 +26,11 @@ import { PicnicsComponent } from './picnics/picnics.component';
 import { RomanticsComponent } from './romantics/romantics.component';
 
 import { RatingModule } from 'ng-starrating';
-
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { UserService } from './shared/user.service';
+import { AuthGuard } from './auth/auth.guard';
+import { AuthInterceptor } from './auth/auth.interceptor';
 
 
 @NgModule({
@@ -37,7 +41,6 @@ import { RatingModule } from 'ng-starrating';
     NavbarComponent,
     MainbodyComponent,
     LoginComponent,
-    SignUpComponent,
     ActivitiesComponent,
     ContactUsComponent,
     FaqComponent,
@@ -47,7 +50,9 @@ import { RatingModule } from 'ng-starrating';
     ReligiousComponent,
     ShoppingsComponent,
     PicnicsComponent,
-    RomanticsComponent
+    RomanticsComponent,
+    UserProfileComponent,
+    SignUpComponent
   ],
 
   imports: [
@@ -61,10 +66,11 @@ import { RatingModule } from 'ng-starrating';
     RouterModule.forRoot([
       {
         path: 'login', component: LoginComponent
-
       },
       {
-
+        path: 'userProfile', component: UserProfileComponent, canActivate:[AuthGuard]
+      },
+      {
         path:'',component:MainbodyComponent
       },
       {
@@ -103,7 +109,11 @@ import { RatingModule } from 'ng-starrating';
     ]),
 
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true
+  },AuthGuard ,UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

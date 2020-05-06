@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+
+import { UserService } from '../../app/shared/user.service';
 import { NgForm } from '@angular/forms';
-
-import { UserService } from '../shared/user.service';
-
-
-declare var M: any;
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-sign-up',
@@ -13,29 +11,42 @@ declare var M: any;
   providers: [UserService]
 })
 export class SignUpComponent implements OnInit {
-  
+  emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  showSuccessMessage: boolean;
+  serverErrorMessages: string;
 
-  constructor( private userService: UserService) { }
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
-    this.resetForm();
   }
 
-  resetForm(form?: NgForm) {
-    if(form)
-      form.reset();
-      this.userService.selectedUser = {
-        _id:"",
-        email:"",
-        pass:"",
-        cpass:""
+  onSubit(form: NgForm) {
+    return this.userService.postUser(form.value).subscribe(
+      res => {
+        this.showSuccessMessage = true;
+        setTimeout(() => this.showSuccessMessage = false, 4000);
+        this.resetForm(form);
+      },
+      err => {
+        if (err.status === 422) {
+          this.serverErrorMessages = err.error.join('<br/>');
+        }
+        else
+          this.serverErrorMessages = 'Something went wrong. Please contact ADMIN';
       }
+    );
   }
 
-  onSubmit(form : NgForm) {
-    this.userService.postUser(form.value).subscribe((res) => {
-      this.resetForm(form);
-      M.toast({ html: 'Saved Successfully', classes: 'rounded' });
-    });
+  resetForm(form: NgForm) {
+    this.userService.selectedUser = {
+      fullName: '',
+      email: '',
+      password: ''
+    };
+    form.resetForm();
+    this.serverErrorMessages = '';
   }
+
 }
+
+
