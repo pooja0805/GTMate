@@ -1,5 +1,5 @@
 require('./config/config');
-const { mongoose } = require('./models/db.js');
+require('./models/db.js');
 require('./config/passportConfig');
 
 const express = require('express');
