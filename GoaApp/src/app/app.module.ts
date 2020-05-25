@@ -31,6 +31,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { UserService } from './shared/user.service';
 import { AuthGuard } from './auth/auth.guard';
 import { AuthInterceptor } from './auth/auth.interceptor';
+import { SearchComponent } from './search/search.component';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { AuthInterceptor } from './auth/auth.interceptor';
     PicnicsComponent,
     RomanticsComponent,
     UserProfileComponent,
-    SignUpComponent
+    SignUpComponent,
+    SearchComponent
   ],
 
   imports: [
