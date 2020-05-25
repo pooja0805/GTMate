@@ -3,14 +3,7 @@
         <h1>{{current.name}}</h1>
     </div>
 
-    <div class="image">
-        <img src="{{current.pictures}}" >
-    </div>
-
     <div class="description">
-        <h3>Description: </h3>
-        <h4>{{current.description}}</h4>
-        <br>
         <h3>Ratings: </h3>
 
         <star-rating 
@@ -23,6 +16,14 @@
             readonly="true" 
             (rate)="onRate($event)">
         </star-rating>
-
+        <br>
+        <h3>Description: </h3>
+        <h4>{{current.description}}</h4>    
     </div>
+
+    <div class="image">
+        <img src="{{current.pictures}}" >
+    </div>
+
+    
 </div>
