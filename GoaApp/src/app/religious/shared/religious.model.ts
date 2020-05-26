@@ -12,4 +12,5 @@ export class Religious {
     reviews:number;
     rvalue: number;
     tags: any;
+    nearby: any;
 }

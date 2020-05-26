@@ -12,4 +12,5 @@ export class Info {
     reviews:number;
     rvalue: number;
     tags: any;
+    nearby: any;
 }

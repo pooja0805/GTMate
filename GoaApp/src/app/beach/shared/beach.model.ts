@@ -12,4 +12,5 @@ export class Beach {
     reviews:number;
     rvalue: number;
     tags: any;
+    nearby: any;
 }

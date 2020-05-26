@@ -12,7 +12,8 @@ var Religious = mongoose.model('Religious',{
     rating: { type: Object },
     reviews: { type: Number },
     rvalue: { type: Number },
-    tags: {  type: Array }
+    tags: {  type: Array },
+    nearby: {  type: Array }
 });
 
 module.exports = { Religious };

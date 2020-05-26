@@ -12,4 +12,5 @@ export class Romantic {
     reviews:number;
     rvalue: number;
     tags: any;
+    nearby: any;
 }

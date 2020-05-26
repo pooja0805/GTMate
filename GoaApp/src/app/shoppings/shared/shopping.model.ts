@@ -12,4 +12,5 @@ export class Shopping {
     reviews:number;
     rvalue: number;
     tags: any;
+    nearby: any;
 }
