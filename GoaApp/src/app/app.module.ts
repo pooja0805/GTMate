@@ -32,6 +32,7 @@ import { UserService } from './shared/user.service';
 import { AuthGuard } from './auth/auth.guard';
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { SearchComponent } from './search/search.component';
+import { AInfoComponent } from './a-info/a-info.component';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import { SearchComponent } from './search/search.component';
     RomanticsComponent,
     UserProfileComponent,
     SignUpComponent,
-    SearchComponent
+    SearchComponent,
+    AInfoComponent
   ],
 
   imports: [
@@ -71,6 +73,12 @@ import { SearchComponent } from './search/search.component';
       },
       {
         path: 'userProfile', component: UserProfileComponent, canActivate:[AuthGuard]
+      },
+      {
+        path: 'activitiess', component: AInfoComponent
+      },
+      {
+        path: 'activity', component: SearchComponent
       },
       {
         path:'',component:MainbodyComponent

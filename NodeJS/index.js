@@ -16,6 +16,7 @@ var religiousController = require('./controllers/religiousController.js');
 var shoppingController = require('./controllers/shoppingController.js');
 var picnicSpotController = require('./controllers/picnicController.js');
 var romanticController = require('./controllers/romanticController.js');
+var searchController = require('./controllers/searchController.js');
 
 var app = express();
 
@@ -44,3 +45,4 @@ app.use('/religiousPlaces',religiousController);
 app.use('/shoppingPlaces',shoppingController);
 app.use('/picnicSpots', picnicSpotController);
 app.use('/romanticPlaces', romanticController);
+app.use('/searchPlaces',searchController);
