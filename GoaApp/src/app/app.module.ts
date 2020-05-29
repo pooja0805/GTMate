@@ -33,6 +33,7 @@ import { AuthGuard } from './auth/auth.guard';
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { SearchComponent } from './search/search.component';
 import { AInfoComponent } from './a-info/a-info.component';
+import { PackageComponent } from './package/package.component';
 
 
 @NgModule({
@@ -56,7 +57,8 @@ import { AInfoComponent } from './a-info/a-info.component';
     UserProfileComponent,
     SignUpComponent,
     SearchComponent,
-    AInfoComponent
+    AInfoComponent,
+    PackageComponent
   ],
 
   imports: [
@@ -115,6 +117,9 @@ import { AInfoComponent } from './a-info/a-info.component';
       },
       {
         path:'e-info/:_id',component: EInfoComponent
+      },
+      {
+        path:'package',component: PackageComponent
       }
     ]),
 

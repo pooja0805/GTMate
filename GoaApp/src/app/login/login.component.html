@@ -6,20 +6,24 @@
     </div>
 
     <form #loginForm="ngForm" (ngSubmit)="loginForm.valid && onSubmit(loginForm)">
-        <input type="text" #email="ngModel" [(ngModel)]="model.email" name="email" placeholder="Email"
+      <input type="text" #email="ngModel" [(ngModel)]="model.email" name="email" placeholder="Email"
         [pattern]="emailRegex" required [ngClass]="{'invalid-textbox' :loginForm.submitted && !email.valid }">
-        <div *ngIf="loginForm.submitted && email.errors?.pattern">
-          <label class="validation-message">Invalid Email Address</label>
-        </div>
+      <div *ngIf="loginForm.submitted && email.errors?.pattern">
+        <label class="validation-message">Invalid Email Address</label>
+      </div>
 
-        <input type="password" #password="ngModel" [(ngModel)]="model.password" name="password" placeholder="Password"
+      <input type="password" #password="ngModel" [(ngModel)]="model.password" name="password" placeholder="Password"
         required minlength="4" [ngClass]="{'invalid-textbox' :loginForm.submitted && !password.valid }">
-        <div *ngIf="loginForm.submitted && password.errors?.minlength">
-          <label class="validation-message">Minimum 4 characters.</label>
-        </div>
+      <div *ngIf="loginForm.submitted && password.errors?.minlength">
+        <label class="validation-message">Minimum 4 characters.</label>
+      </div>
 
-        <input type="submit" value="Login">
-    </form> 
+      <h5>-----OR-----</h5>
+
+      <a routerLink="/sign-up"><h4>Sign Up</h4></a><br>
+
+      <input type="submit" value="Login">
+    </form>
   </div>
 </div>
 

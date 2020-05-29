@@ -6,24 +6,23 @@
     <div class="description">
         <h3>Ratings: </h3>
 
-        <star-rating 
-            class="star"
-            value="{{current.rating.value}}" 
-            totalstars="5" 
-            checkedcolor="red" 
-            uncheckedcolor="black" 
-            size="27px" 
-            readonly="true" 
-            (rate)="onRate($event)">
+        <star-rating class="star" value="{{current.rating.value}}" totalstars="5" checkedcolor="red"
+            uncheckedcolor="black" size="27px" readonly="true" (rate)="onRate($event)">
         </star-rating>
         <br>
         <h3>Description: </h3>
-        <h4>{{current.description}}</h4>    
+        <h4>{{current.description}}</h4>
     </div>
 
     <div class="image">
-        <img src="{{current.pictures}}" >
+        <img src="{{current.pictures}}">
     </div>
 
-    
+    <br><br><br>
+
+    <div class="add">
+        <h5>Add to Package</h5>
+    </div>
+
+
 </div>
