@@ -27,11 +27,11 @@
         <label *ngIf="password.errors.minlength" class="validation-message">Enter atleast 4 characters</label>
       </div>
 
-      <h5>-----OR-----</h5>
-
-      <a routerLink="/login"><h4>Login</h4></a><br>
-
       <input type="submit" value="Sign Up">
+      
+      <br>
+      Already have an account? Login here
+      <a routerLink="/login"><input type="submit" value="Login"></a>
     </form>
   </div>
 </div>
